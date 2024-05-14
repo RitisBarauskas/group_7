@@ -15,6 +15,9 @@ class Comment(models.Model):
         verbose_name = 'Комментарий'
         verbose_name_plural = 'Комментарии'
 
+    def __str__(self):
+        return self.name
+
 
 class Review(models.Model):
     name = models.CharField(max_length=MAX_LENGTH_CHAR_FIELD)
